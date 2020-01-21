@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<title>Create User</title>
+</head>
+<body>
+<h1>Create User</h1>
+<hr>
+<form action="create_user.html" metod="get" enctype="application/x-www-form-urlencoded">
+    <p><b>Username</b><br>
+        <input type="text" size="30" maxlength="12"placeholder= "username" pattern="[A-Za-z]" title="only contain letters">
+    
+        <label>
+            <input type="checkbox" name="peas">
+          </label>
+    </p>
+   
+        <p><b>Password:</b><br>
+            <input type="text" size="30" maxlength="8" placeholder= "password"pattern="^[ 0-9]+$"title="only be numbers">
+            <input type="checkbox" name="peas">   
+        </label>
+        </p>
+
+<input type="radio" name="hero" value="Superman"> Superman<br>
+<input type="radio" name="hero" value="Batman"> Batman<br>
+<input type="radio" name="hero" value="Wonder Woman" checked> Wonder Woman<br>
+<input type="radio" name="hero" value="Flash"> Flash<br>
+<input type="radio" name="hero" value="Thor & Hulk"> Thor & Hulk<br>
+<p><b>Superhero name</b><br>
+    <input type="text" size="30" maxlength="12"placeholder= "Superhero name">
+    <label>
+        <input type="checkbox" name="peas">
+      </label>
+</p>  
+    <legend>Select your favourite video game</legend>      
+    <input type="checkbox" name="video game" value="Cats">Fifa<br>      
+    <input type="checkbox" name="video game" value="Dogs">NHL<br>      
+    <input type="checkbox" name="video game" value="Birds"checked>Residen Evil & Uncharted<br>      
+    <br>      
+    <p><b>Video game</b><br>
+        <input type="text" size="30" maxlength="12"placeholder= "Video game">
+        <label>
+            <input type="checkbox" name="peas">
+          </label>
+    </p>    
+
+<p><b>E-maile</b><br>
+<input type="email" name="emailaddress" placeholder= "E-maile">
+<br>
+<p><b>Your birhday</b><br>
+<input type="date" name="your birhday" placeholder= "birhday">
+<br>
+<p><b>Your website</b><br>
+<input type="url" name="website"placeholder="website">
+   
+<br>
+<br>
+
+<Form ACTION="findbygoogle.php" METHOD="POST">
+  
+<form action="https://www.google.ca/search">
+
+</form>
+
+<form action="https://www.google.ca/search?q=YOUR_SEARCH_VALUE/" target="_blank">
+    <input type="search" name="q">
+    <input type="hidden" name="as_sitesearch"> 
+    <input type="submit" value="Search">
+  </form>
+
+<br>
+
+<input type="hidden" id="custId" name="userid" value="2300">
+
+<br>
+<br>
+  <input type="image" src="img/register_button.png"width="100"/>
+</form>
+
+</body>
+</html>
