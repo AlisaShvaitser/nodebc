@@ -1,0 +1,42 @@
+
+body {border-width: 1px;
+border-style: solid;
+border-color: black;}
+
+div {border-width: 1px;
+    border-style: solid;
+    border-color:red;
+    padding: 10px ;
+    margin: 10px ;}
+
+span { border-width: 1px;
+    border-style: solid;
+    border-color: orange;
+    padding: 10px ;
+    margin: 10px ;}
+
+
+body { padding: 0px ;
+    margin: 0px ;
+}
+
+.box { width: 300px;
+    height: 100px ;
+}
+
+
+.min { width: 100px;
+    height: 10px ;
+}
+
+.max { width: 200px;
+    height: 40px ;
+}
+
+.center { width: 300px;
+    margin: auto;
+}
+
+
+.inline-center {text-align: center;
+}
