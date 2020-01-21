@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact</title>
+</head>
+<body>
+  <h1>Contact</h1>
+  <hr>
+  <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+  <hr>
+  <p><a href="about.html">About page</a></p> 
+  <p><a href="news.html">News page</a></p> 
+  <p><a href="index.html">Index page</a></p> 
+  <p><a href="documents/resume.html">Resume page</a></p> 
+  <br>
+  
+<br>
+  <div id="after_submit"></div>
+<form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+  <div class="row">
+    <label class="required" for="name">Your name:</label><br />
+    <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+    <span id="name_validation" class="error_message"></span>
+  </div>
+  <div class="row">
+    <label class="required" for="email">Your email:</label><br />
+    <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+    <span id="email_validation" class="error_message"></span>
+  </div>
+  <div class="row">
+    <label class="required" for="message">Your message:</label><br />
+    <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+    <span id="message_validation" class="error_message"></span>
+  </div>
+    
+    <input id="submit_button" type="submit" value="Send email" />
+</form>
+</body>
+</html>
