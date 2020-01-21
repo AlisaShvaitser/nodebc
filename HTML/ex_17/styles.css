@@ -1,0 +1,11 @@
+body {
+    background-color: #FFF2BB;
+    font-family: Arial;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    justify-content: center;
+  }
+  
