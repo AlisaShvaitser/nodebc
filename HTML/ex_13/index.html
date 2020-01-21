@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Create User</title>
+</head>
+
+<body>
+<h1>Create User</h1>
+<hr>
+<form action="create_user.html" metod="get" enctype="application/x-www-form-urlencoded">
+    <p><b>Name</b><br>
+        <input type="text" size="30" maxlength="12"placeholder= "name">
+        <label>
+            <input type="checkbox" name="peas">
+          </label>
+    </p>
+    <select>
+        <option value="deadpool">Deadpool</option>
+        <option value="batman_vs_superman">Batman v Superman</option>
+        <option value="civil_war">Captain America: Civil War</option>
+        <option value="suicide_squad">Suicide Squad</option>
+        <option value="apocalypse">X-Men: Apocalypse</option>
+        <option value="gotg_vol2">Guardians of the Galaxy Vol 2</option>
+        <option value="justice_league">Justice League</option>
+        <option value="logan">Logan</option>
+        <option value="homecoming">Spider-Man: Homecoming</option>
+        <option value=" wonder_woman"selected>Wonder Woman</option>
+        <option value="thor_ragnarok">Thor:Ragnarok</option>
+        <option value="black_panther">Black Panther</option>
+
+          </select>
+          <br>
+          <br>
+          <textarea rows = "5" cols = "60" name = "description">
+            Write the bio there...
+         </textarea><br>
+      <br>
+      <input type="file" name="myFile">
+      <div class="preference">
+        <label for="peas"></label>
+        <input type="checkbox" name="peas" id="peas">
+    </div>
+      <input type="reset" value="Reset"/>
+      <div class="preference">
+        <label for="peas"></label>
+        <input type="checkbox" name="peas" id="peas">
+    </div>
+    </form>
+</body>
+
+</html>
