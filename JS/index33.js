@@ -1,0 +1,11 @@
+let userCount = 100;
+let IncrementUserCount = userCount +5;
+console.log ( "Increment the user count " + IncrementUserCount);
+let DecrementUserCount = IncrementUserCount -3;
+console.log ( "Decrement the user count " + DecrementUserCount);
+let doubleUserCount = DecrementUserCount *2;
+console.log ( "double the user count " + doubleUserCount);
+let menCount = doubleUserCount / 2 ;
+let womenCount = menCount;
+console.log ( "Men counts " + menCount); 
+console.log ( "Women counts " + womenCount); 
