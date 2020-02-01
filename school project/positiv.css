@@ -1,0 +1,75 @@
+#pic { position:fixed;
+    top:100px;
+    left:400px;
+    width:500px;
+}
+  
+#splash {  position:fixed;
+    top:0px;
+    left:100px;
+    width:300px;
+    
+   
+}      
+#Why {  position:fixed;
+    top:50px;
+    left:100px;
+    width:200px;
+    
+   
+}   
+
+#heart 
+
+{  
+    position:fixed;
+    bottom:60px;
+    left:220px;
+    width:100px;  
+  }
+
+#What {  
+    position:fixed;
+    bottom:50px;
+    left:100px;
+    width:200px;  
+  }
+
+  #no {
+    position:fixed;
+    top:30px;
+    right:100px;
+    width:200px;
+
+  }
+
+  #Not{
+    position:fixed;
+    top:50px;
+    right:100px;
+    width:200px;
+
+  }
+
+  #yoga { 
+    position:fixed;
+    bottom:50px;
+    right:300px;
+    width:200px;    
+  }
+  #How { 
+    position:fixed;
+    bottom:50px;
+    right:100px;
+    width:200px;    
+  }
+
+h2{
+    font-family: Verdana, Arial, Helvetica, sans-serif; /* Гарнитура текста */ 
+    font-size: 200%; /* Размер шрифта в процентах */ 
+    color:#653332;
+   } 
+li {
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    font-size: 130%; /* Размер шрифта в пунктах */ 
+        }
