@@ -7,19 +7,19 @@ ground.src = "img/ground.png";
 const foodImg = new Image();
 foodImg.src = "img/food.png";
 
-let box = 37;
+let box = 36;
 
 let score = 0;
 
 let food = {
-	x: Math.floor((Math.random() * 14 + 1)) * box,
-	y: Math.floor((Math.random() * 14 + 1)) * box,
+	x: Math.floor((Math.random() * 15 + 1)) * box,
+	y: Math.floor((Math.random() * 13 + 1)) * box,
 };
 
 let snake = [];
 snake[0] = {
-	x: 9 * box,
-	y: 10 * box
+	x: 10 * box,
+	y: 12 * box
 };
 
 document.addEventListener("keydown", direction);
@@ -70,8 +70,8 @@ function drawGame() {
 	} else
 		snake.pop();
 
-	if(snakeX < box || snakeX > box * 20
-		|| snakeY < 2 * box || snakeY > box * 15)
+	if(snakeX < box || snakeX > box * 21
+		|| snakeY < box || snakeY > box * 15)
 		clearInterval(game);
 
 	if(dir == "left") snakeX -= box;
