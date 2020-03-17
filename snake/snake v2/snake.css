@@ -1,5 +1,6 @@
 canvas {display: block;
-margin: 0 auto;}
+ margin: 0 auto;}  
+ /* тут можно подогнать мою ширину,длину */
 html { overflow:  hidden; }
 div { height:  2000px; }
 body { background: green; }

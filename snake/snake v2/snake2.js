@@ -7,19 +7,19 @@ ground.src = "img/ground.png";
 const foodImg = new Image();
 foodImg.src = "img/food.png";
 
-let box = 36;
+let box = 32; //размер квадратика на поле
 
-let score = 0;
+ let score = 0; //хранит счет
 
 let food = {
-	x: Math.floor((Math.random() * 15 + 1)) * box,
-	y: Math.floor((Math.random() * 13 + 1)) * box,
+	x: Math.floor((Math.random() * 17 + 1)) * box,
+	y: Math.floor((Math.random() * 15 + 3)) * box,
 };
 
-let snake = [];
+let snake = []; //массив. Начальное положение.
 snake[0] = {
 	x: 10 * box,
-	y: 12 * box
+	y: 8 * box
 };
 
 document.addEventListener("keydown", direction);
@@ -64,14 +64,14 @@ function drawGame() {
 	if(snakeX == food.x && snakeY == food.y) {
 		score++;
 		food = {
-			x: Math.floor((Math.random() * 16 + 1)) * box,
-			y: Math.floor((Math.random() * 15 + 1)) * box,
+			x: Math.floor((Math.random() * 17 + 1)) * box,
+			y: Math.floor((Math.random() * 15 + 3)) * box,
 		};
 	} else
 		snake.pop();
 
-	if(snakeX < box || snakeX > box * 21
-		|| snakeY < box || snakeY > box * 15)
+	if(snakeX < box || snakeX > box * 23
+		|| snakeY < box || snakeY > box * 17)
 		clearInterval(game);
 
 	if(dir == "left") snakeX -= box;
