@@ -13,13 +13,13 @@ let box = 32; //размер квадратика на поле
 
 let food = {
 	x: Math.floor((Math.random() * 17 + 1)) * box,
-	y: Math.floor((Math.random() * 15 + 3)) * box,
+	y: Math.floor((Math.random() * 15 + 2)) * box,
 };
 
 let snake = []; //массив. Начальное положение.
 snake[0] = {
-	x: 10 * box,
-	y: 8 * box
+	x: 12 * box,
+	y: 9 * box
 };
 
 document.addEventListener("keydown", direction);
@@ -65,7 +65,7 @@ function drawGame() {
 		score++;
 		food = {
 			x: Math.floor((Math.random() * 17 + 1)) * box,
-			y: Math.floor((Math.random() * 15 + 3)) * box,
+			y: Math.floor((Math.random() * 15 + 2)) * box,
 		};
 	} else
 		snake.pop();
@@ -90,3 +90,4 @@ snake.unshift(newHead);
 }
 
  let game = setInterval(drawGame, 100);
+
