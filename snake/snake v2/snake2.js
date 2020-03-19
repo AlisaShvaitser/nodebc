@@ -1,6 +1,9 @@
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
+function button() {window.location.reload()
+	};
+
 const ground = new Image();
 ground.src = "img/ground.png";
 
@@ -90,4 +93,6 @@ snake.unshift(newHead);
 }
 
  let game = setInterval(drawGame, 100);
+
+ 
 
