@@ -2,13 +2,16 @@ const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
 function button() {window.location.reload()
-	};
+	}
 
 const ground = new Image();
 ground.src = "img/ground.png";
 
 const foodImg = new Image();
 foodImg.src = "img/food.png";
+
+const gameOver = new Image();
+gameOver.src = "img/game over.png";
 
 let box = 32; //размер квадратика на поле
 
@@ -44,8 +47,13 @@ function eatTail(head, arr) {
 	for(let i = 0; i < arr.length; i++) {
 		if(head.x == arr[i].x && head.y == arr[i].y)
 			clearInterval(game);
+		if(head.x == arr[i].x && head.y == arr[i].y)	
+			ctx.drawImage(gameOver, 0, 0);
+		
 	}
 }
+
+
 
 function drawGame() {
 	ctx.drawImage(ground, 0, 0);
@@ -72,10 +80,20 @@ function drawGame() {
 		};
 	} else
 		snake.pop();
+	
+	
 
 	if(snakeX < box || snakeX > box * 23
 		|| snakeY < box || snakeY > box * 17)
+		
 		clearInterval(game);
+
+	if(snakeX < box || snakeX > box * 23
+			|| snakeY < box || snakeY > box * 17)
+			
+		ctx.drawImage(gameOver, 0, 0);
+		
+		
 
 	if(dir == "left") snakeX -= box;
 	if(dir == "right") snakeX += box;
@@ -88,9 +106,11 @@ function drawGame() {
 	};
 
 	eatTail(newHead, snake);
-
+	
 snake.unshift(newHead);
 }
+
+
 
  let game = setInterval(drawGame, 100);
 
