@@ -1,8 +1,7 @@
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
-function button() {window.location.reload()
-	}
+function button() {window.location.reload()	}
 
 const ground = new Image();
 ground.src = "img/ground.png";
@@ -12,6 +11,17 @@ foodImg.src = "img/food.png";
 
 const gameOver = new Image();
 gameOver.src = "img/game over.png";
+
+const bgMusic = new Audio();
+bgMusic.src = "audio/bgMusic.mp3";
+
+const eatSound = new Audio();
+eatSound.src = "audio/eatSound.wav";
+
+const endSound = new Audio();
+endSound.src = "audio/endSound.wav";
+
+
 
 let box = 32; //размер квадратика на поле
 
@@ -46,9 +56,11 @@ function direction(event) {
 function eatTail(head, arr) {
 	for(let i = 0; i < arr.length; i++) {
 		if(head.x == arr[i].x && head.y == arr[i].y)
+		{
 			clearInterval(game);
-		if(head.x == arr[i].x && head.y == arr[i].y)	
 			ctx.drawImage(gameOver, 0, 0);
+			bgMusic.pause(); 
+			endSound.play();}
 		
 	}
 }
@@ -59,6 +71,8 @@ function drawGame() {
 	ctx.drawImage(ground, 0, 0);
 
 	ctx.drawImage(foodImg, food.x, food.y);
+
+	bgMusic.play();
 
 	for(let i = 0; i < snake.length; i++) {
 		ctx.fillStyle = i == 0 ? "green" : "red";
@@ -74,6 +88,7 @@ function drawGame() {
 
 	if(snakeX == food.x && snakeY == food.y) {
 		score++;
+		eatSound.play();
 		food = {
 			x: Math.floor((Math.random() * 17 + 1)) * box,
 			y: Math.floor((Math.random() * 15 + 2)) * box,
@@ -84,16 +99,13 @@ function drawGame() {
 	
 
 	if(snakeX < box || snakeX > box * 23
-		|| snakeY < box || snakeY > box * 17)
-		
+		|| snakeY < box || snakeY > box * 17) {
 		clearInterval(game);
-
-	if(snakeX < box || snakeX > box * 23
-			|| snakeY < box || snakeY > box * 17)
-			
 		ctx.drawImage(gameOver, 0, 0);
+		bgMusic.pause(); 
+	    endSound.play();}
 		
-		
+	
 
 	if(dir == "left") snakeX -= box;
 	if(dir == "right") snakeX += box;

@@ -9,6 +9,16 @@
 <body>
 	<canvas id="game" width="800" height="600"></canvas>
     <script src="snake2.js"></script>
+    
+    <canvas id="game">
+        <span style="color:red">Your browser doesn't support HTML5 Canvas.</span>
+      </canvas>
+      
+      <script type="text/javascript">
+      (function(){
+      if(typeof ({}.__defineGetter__) != "function" && typeof (Object.defineProperty) != "function")
+        alert("Your browser doesn't support latest JavaScript version.");})()
+      </script>
 
 <button onclick="button()">Start</button>
 </body>
