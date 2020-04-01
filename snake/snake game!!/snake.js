@@ -1,7 +1,17 @@
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
-function button() {window.location.reload()	}
+function start() {window.location.reload()	};
+
+
+function stopMusic () {
+	bgMusic.volume = 0;
+ };
+
+function stopSounds () {
+	eatSound.volume = 0;
+	endSound.volume = 0;
+ };
 
 const ground = new Image();
 ground.src = "img/ground.png";
@@ -122,9 +132,11 @@ function drawGame() {
 snake.unshift(newHead);
 }
 
-
-
  let game = setInterval(drawGame, 100);
+
+ 
+
+ 
 
  
 
