@@ -3,7 +3,6 @@ const ctx = canvas.getContext("2d");
 
 function start() {window.location.reload()	};
 
-
 function stopMusic () {
 	bgMusic.volume = 0;
  };
@@ -12,6 +11,7 @@ function stopSounds () {
 	eatSound.volume = 0;
 	endSound.volume = 0;
  };
+
 
 const ground = new Image();
 ground.src = "img/ground.png";
