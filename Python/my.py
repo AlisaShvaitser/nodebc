@@ -1,5 +1,7 @@
-for digit in "0165031806510":
-    if digit == "0":
-        print("x", end="")
-        continue
-    print(digit, end="")
+from platform import platform
+
+print(platform())
+print(platform(1))
+print(platform(0, 1))
+
+
